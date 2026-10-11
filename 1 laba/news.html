@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Ваше Прізвище та Ім'я">
+    <title>AutoDrive — Новини компанії</title>
+    
+    <!-- Тег <style> з атрибутами type та media (Частина 3) -->
+    <style type="text/css" media="all">
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header-title { color: #2b2b2b; }
+        .news-box { background-color: #f9f9f9; padding: 10px; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <!-- Тег <header> з атрибутами class та title -->
+    <header class="main-header" title="Шапка новин">
+        <h1>Спеціальні пропозиції та Новини AutoDrive</h1>
+    </header>
+
+    <div class="main-content" style="padding: 10px;">
+        
+        <!-- Картографічна навігація за допомогою map та area -->
+        <map id="news-map" href="news.html" lang="uk" onfocus="console.log('focus')" shape="rect">
+            <area shape="rect" accesskey="n" tabindex="1" class="area-link" title="Новина 1" coords="0,0,80,80" href="#news1">
+        </map>
+
+        <img height="150" hspace="10" border="0" ismap src="2107.jpg" alt="Банер новин" usemap="#news-map">
+
+        <article>
+            <h2>Нова модель Toyota Camry(вуаз 2107) <sup><span class="badge" id="sup1" style="color: red;">NEW</span></sup> вже у продажу!</h2>
+            
+            <p>
+                Опубліковано: <time style="font-weight: bold;" lang="uk">2026-10-11</time><br>
+                Початкова ціна автомобіля складала <del>35 000 $</del>, але зараз діє знижка: 
+                <mark id="discount-mark" cite="http://autodrive.ua/promo" datetime="2026-10-11">32 000 $</mark><sub><span class="sub-text" id="sub1">*акційна ціна</span></sub>.
+            </p>
+
+            <p>
+                Більше детальної інформації про комплектації шукайте на сайті: 
+                <bdo dir="ltr"><span style="color: blue;" title="Сайт компанії">www.autodrive.ua</span></bdo>
+                <wbr id="wbr1" class="break-line">
+            </p>
+
+            <!-- Приклад використання <ruby>, <rt> -->
+            <p>
+                Японська надійність: <ruby id="ruby1"><rb>Автомобіль</rb><rt class="rt-text" id="rt1">Car</rt></ruby>.
+            </p>
+        </article>
+
+    </div>
+
+    <!-- Тег <aside> з атрибутами id та title -->
+    <aside id="sidebar-news" title="Бічна панель">
+        <h3>Короткі повідомлення</h3>
+        <p>Автосалон працює без вихідних з 09:00 до 18:00.</p>
+    </aside>
+
+    <!-- Тег <footer> з атрибутами class та style -->
+    <footer class="footer-box" style="margin-top: 20px; border-top: 1px solid #ccc;">
+        <p>&copy; 2026 AutoDrive. Всі права захищено.</p>
+        <p><a href="index.html">На головну</a> | <a href="catalog.html">До каталогу</a></p>
+    </footer>
+
+</body>
+</html>
