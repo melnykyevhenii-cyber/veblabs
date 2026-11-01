@@ -4,48 +4,101 @@
     <meta charset="UTF-8">
     <meta name="Author" content="Мельник Євгеній">
     <title>AutoDrive — Каталог автомашин</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Автосалон AutoDrive — Каталог Автомашин</h1>
+    <header class="main-header" title="Шапка каталогу">
+        <h1>Автосалон AutoDrive — Каталог Автомашин</h1>
+        <p class="subtitle">Офіційний дилер кращих світових автовиробників</p>
+    </header>
 
-    <p style="text-align: center;" dir="ltr">
-        <strong style="color: darkblue;" dir="ltr">Офіційний дилер кращих світових автовиробників.</strong>
-    </p>
+    <div class="container">
+        
+        <!-- Блок цитати -->
+        <div class="quote-card">
+            <blockquote lang="uk" class="italic-quote">
+                <em lang="uk">"Якісне авто — це запорука вашої безпеки та комфорту на дорозі."</em>
+            </blockquote>
+        </div>
 
-    <blockquote lang="uk" class="quote-box" style="border-left: 3px solid #ccc; padding-left: 10px;">
-        <em lang="uk" class="italic-quote">"Якісне авто — це запорука вашої безпеки та комфорту на дорозі."</em>
-    </blockquote>
+        <!-- Основна секція -->
+        <article class="content-box">
+            <h2>Наші автомобілі</h2>
+            <p class="hint-text">
+                Для швидкого вибору скористайтеся підказками клавіатури: натисніть <kbd id="btn-kbd" title="Клавіша Enter" tabindex="0">Enter</kbd>.
+            </p>
 
-    <h2>Наші автомобілі</h2>
-    <p>Для оформлення замовлення скористайтеся підказками клавіатури: натисніть <kbd id="btn-kbd" title="Клавіша Enter">Enter</kbd>.</p>
+            <!-- Сучасна інтерактивна таблиця -->
+            <div class="table-wrapper">
+                <table class="custom-table">
+                    <caption class="custom-table-caption">Доступний модельний ряд</caption>
+                    <thead>
+                        <tr>
+                            <th>Вид</th>
+                            <th>Марка</th>
+                            <th>Виробник</th>
+                            <th>Постачальник</th>
+                            <th>Ціна ($)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge badge-blue">Седан</span></td>
+                            <td><strong>Camry</strong></td>
+                            <td>Toyota</td>
+                            <td>ТОВ "АвтоІмпорт"</td>
+                            <td class="price">32 000 $</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-dark">Кросовер</span></td>
+                            <td><strong>X5</strong></td>
+                            <td>BMW</td>
+                            <td>Баварія Моторс</td>
+                            <td class="price">75 000 $</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-green">Хетчбек</span></td>
+                            <td><strong>Golf</strong></td>
+                            <td>Volkswagen</td>
+                            <td>ЄвроКар</td>
+                            <td class="price">24 500 $</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="custom-table-footer">
+                        <tr>
+                            <td colspan="5">Усі ціни вказані з урахуванням ПДВ та передпродажної підготовки.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
 
-    <!-- Обов'язкові поля Варіанту 13: Вид, марка, виробник, постачальник, ціна -->
-    <pre style="font-family: monospace;" dir="ltr">
----------------------------------------------------------------------------------------------
-| Вид        | Марка        | Виробник      | Постачальник      | Ціна ($)     |
----------------------------------------------------------------------------------------------
-| Седан      | Camry        | Toyota        | ТОВ "АвтоІмпорт"  | 32 000 $     |
-| Кросовер   | X5           | BMW           | Баварія Моторс    | 75 000 $     |
-| Хетчбек    | Golf         | Volkswagen    | ЄвроКар          | 24 500 $     |
----------------------------------------------------------------------------------------------
-    </pre>
+            <p class="quality-info">
+                Скорочена назва стандарту якості: <abbr dir="ltr" title="International Organization for Standardization">ISO 9001</abbr>.
+            </p>
+        </article>
 
-    <p>Скорочена назва стандарту якості: <abbr dir="ltr" style="border-bottom: 1px dashed;">ISO 9001</abbr>.</p>
+        <!-- Галерея / План автосалону -->
+        <section class="content-box showroom-section">
+            <h3>План автосалону (Мої ласточки)</h3>
+            <div class="img-container">
+                <img id="car-img" class="responsive-img" border="1" ismap usemap="#car-map" src="showroom.jpg" alt="План автосалону AutoDrive">
+            </div>
+        </section>
 
-    <h3>Мої жигулі(ласточкі)
-    
-    </h3>
-    <img id="car-img" class="responsive-img" border="1" ismap usemap="#car-map" src="showroom.jpg" alt="План автосалону">
+        <!-- Контакти -->
+        <address id="contact-info" class="contact-card" title="Адреса компанії">
+            <strong>Контакти:</strong> м. Чернівці, вул. Головна, 100<br>
+            <strong>E-mail:</strong> <a href="mailto:info@autodrive.ua">info@autodrive.ua</a>
+        </address>
 
-    <hr>
+        <!-- Навігація -->
+        <nav class="page-nav">
+            <a href="index.html" class="nav-btn">← На головну</a>
+            <a href="news.html" class="nav-btn nav-btn-primary">Новини та Акції →</a>
+        </nav>
 
-    <address id="contact-info" title="Адреса компанії">
-        Контакти: м. Чернівці, вул. Головна, 100.<br>
-        E-mail: info@autodrive.ua
-    </address>
-
-    <p><a href="index.html">На головну</a> | <a href="news.html">Новини</a></p>
+    </div>
 
 </body>
 </html>

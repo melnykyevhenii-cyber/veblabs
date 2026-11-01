@@ -2,34 +2,26 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="Author" content="Ваше Прізвище та Ім'я">
+    <meta name="Author" content="Мельник Євгеній">
     <title>AutoDrive — Новини компанії</title>
-    
-    <!-- Тег <style> з атрибутами type та media (Частина 3) -->
-    <style type="text/css" media="all">
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .header-title { color: #2b2b2b; }
-        .news-box { background-color: #f9f9f9; padding: 10px; margin-bottom: 15px; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Тег <header> з атрибутами class та title -->
     <header class="main-header" title="Шапка новин">
         <h1>Спеціальні пропозиції та Новини AutoDrive</h1>
     </header>
 
-    <div class="main-content" style="padding: 10px;">
+    <div class="main-content content-box">
         
-        <!-- Картографічна навігація за допомогою map та area -->
-        <map id="news-map" href="news.html" lang="uk" onfocus="console.log('focus')" shape="rect">
+        <map id="news-map" href="news.html" lang="uk" shape="rect">
             <area shape="rect" accesskey="n" tabindex="1" class="area-link" title="Новина 1" coords="0,0,80,80" href="#news1">
         </map>
 
-        <img height="150" hspace="10" border="0" ismap src="2107.jpg" alt="Банер новин" usemap="#news-map">
+        <img height="150" hspace="10" border="0" ismap src="2107.jpg" alt="Банер новин" usemap="#news-map" class="responsive-img">
 
         <article>
-            <h2>Нова модель Toyota Camry(вуаз 2107) <sup><span class="badge" id="sup1" style="color: red;">NEW</span></sup> вже у продажу!</h2>
+            <h2>Нова модель Toyota Camry (ВАЗ 2107) <sup><span class="badge" id="sup1" style="color: red;">NEW</span></sup> вже у продажу!</h2>
             
             <p>
                 Опубліковано: <time style="font-weight: bold;" lang="uk">2026-10-11</time><br>
@@ -39,11 +31,19 @@
 
             <p>
                 Більше детальної інформації про комплектації шукайте на сайті: 
-                <bdo dir="ltr"><span style="color: blue;" title="Сайт компанії">www.autodrive.ua</span></bdo>
+                <bdo dir="ltr"><a href="http://autodrive.ua" title="Сайт компанії">www.autodrive.ua</a></bdo>
                 <wbr id="wbr1" class="break-line">
             </p>
 
-            <!-- Приклад використання <ruby>, <rt> -->
+            <!-- Форма зворотного зв'язку для демонстрації псевдокласів :invalid, :in-range, :checked -->
+            <form style="margin-top: 15px;">
+                <label for="user-age">Ваш вік для тест-драйву (18-99):</label><br>
+                <input type="number" id="user-age" min="18" max="99" value="20"><br><br>
+
+                <input type="checkbox" id="subscribe" checked>
+                <label for="subscribe">Отримувати новини автосалону</label>
+            </form>
+
             <p>
                 Японська надійність: <ruby id="ruby1"><rb>Автомобіль</rb><rt class="rt-text" id="rt1">Car</rt></ruby>.
             </p>
@@ -51,13 +51,15 @@
 
     </div>
 
-    <!-- Тег <aside> з атрибутами id та title -->
-    <aside id="sidebar-news" title="Бічна панель">
+    <aside id="sidebar-news" title="Бічна панель" class="content-box">
         <h3>Короткі повідомлення</h3>
         <p>Автосалон працює без вихідних з 09:00 до 18:00.</p>
     </aside>
 
-    <!-- Тег <footer> з атрибутами class та style -->
+    <div class="hidden-element">
+        <p>Цей елемент прихований відповідно до правил CSS visibility: collapse.</p>
+    </div>
+
     <footer class="footer-box" style="margin-top: 20px; border-top: 1px solid #ccc;">
         <p>&copy; 2026 AutoDrive. Всі права захищено.</p>
         <p><a href="index.html">На головну</a> | <a href="catalog.html">До каталогу</a></p>

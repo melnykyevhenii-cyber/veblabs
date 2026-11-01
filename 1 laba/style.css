@@ -1,0 +1,302 @@
+/* ==========================================================================
+   Лабораторна робота №2 (Варіант 12) — Стилізований каталог
+   ========================================================================== */
+
+/* --- Базові налаштування --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: ltr;
+    unicode-bidi: normal;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #2c3e50;
+    background-color: #f4f7f6;
+    background-image: linear-gradient(to bottom, rgba(244, 247, 246, 0.95), rgba(244, 247, 246, 0.95)), url('showroom.jpg');
+    background-attachment: scroll;
+    background-position: left;
+    line-height: 1.6;
+    margin: 15px;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    min-width: 320px;
+    max-width: 1200px;
+    visibility: visible;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- Шапка сторінки --- */
+.main-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    display: compact;
+    position: static;
+    z-index: auto;
+    float: left;
+    width: 100%;
+    clear: none;
+    height: auto;
+    max-height: none;
+}
+
+.main-header h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.main-header .subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+    color: #e0e6ed;
+}
+
+/* --- Цитата та Картки --- */
+.quote-card {
+    background: #ffffff;
+    border-left: 5px solid #2a5298;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    unicode-bidi: embed;
+    background-position: 50% 50%;
+}
+
+.italic-quote {
+    font-style: italic;
+    color: #555;
+}
+
+.content-box, [class*="box"] {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin: 20px 0;
+    margin-top: 2%;
+    margin-right: 3%;
+    padding: 25px;
+    padding-top: 20px;
+    padding-left: 25px;
+    border-left-width: 4px;
+    border-left-style: double;
+    border-bottom-width: 3px;
+    border-bottom-style: dotted;
+    border-bottom-color: #3498db;
+    overflow: visible;
+}
+
+article h2 {
+    color: #1e3c72;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom-width: thin;
+    border-bottom-style: inset;
+    border-bottom-color: #2a5298;
+    padding-bottom: 5px;
+}
+
+h2 + p {
+    color: #666;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    vertical-align: baseline;
+}
+
+/* --- Клавіші та атрибутні селектори (Варіант 12) --- */
+kbd, [id^="btn"] {
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-family: monospace;
+    font-size: 0.9em;
+    box-shadow: 0 2px 0 #bdc3c7;
+    display: inline;
+    padding-right: 15px;
+    border-right-width: thin;
+    border-right-style: double;
+    border-color: #4a90e2;
+}
+
+kbd:focus {
+    outline-style: double;
+    outline-width: 2px;
+    background-color: #e8f0fe;
+}
+
+/* --- Оформлення Таблиці (CSS Table Positioning) --- */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.custom-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-right-width: 5px;
+    border-right-style: dotted;
+    border-top-style: double;
+    border-color: #bdc3c7;
+}
+
+.custom-table-caption {
+    display: table-caption;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.1em;
+    color: #2c3e50;
+    padding-right: 15px;
+}
+
+.custom-table th {
+    background-color: #2a5298;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: 600;
+}
+
+.custom-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.custom-table-footer {
+    display: table-footer-group;
+    background-color: #f1f5f9;
+    font-size: 0.85em;
+    color: #64748b;
+    text-align: center;
+}
+
+.custom-table-footer td {
+    padding: 10px;
+}
+
+/* Бейджі та Ціни */
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.badge-blue { background-color: #e1f5fe; color: #0288d1; }
+.badge-dark { background-color: #ede7f6; color: #512da8; }
+.badge-green { background-color: #e8f5e9; color: #388e3c; }
+
+.price {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* --- Зображення та План --- */
+.showroom-section {
+    text-align: center;
+}
+
+.img-container {
+    margin-top: 15px;
+}
+
+.responsive-img {
+    display: inline;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    clip: rect(0px, 800px, 500px, 0px);
+}
+
+/* --- Контакти --- */
+.contact-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    border-left-width: thin;
+    border-left-style: double;
+    border-top-style: none;
+    padding-left: 20px;
+    border-left-color: #2a5298;
+}
+
+.contact-card a {
+    color: #1a73e8 !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Кнопки Навігації --- */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.nav-btn-primary {
+    background-color: #2a5298;
+    color: #ffffff !important;
+    border: none;
+}
+
+.nav-btn-primary:hover {
+    background-color: #1e3c72;
+}
+
+/* --- Псевдоелементи (Варіант 12) --- */
+h1::after {
+    content: " ★";
+    color: #f1c40f;
+    vertical-align: 10%;
+}
+
+p::first-line {
+    line-height: normal;
+    vertical-align: middle;
+}
