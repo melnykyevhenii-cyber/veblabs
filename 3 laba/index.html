@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>mel-auto — Автохімія та Автокосметика</title>
+    <link id="main-style" rel="stylesheet" type="text/css" class="theme-link" href="style.css">
+</head>
+<body>
+
+    <!-- Навігаційне меню з кнопкою на новий каталог -->
+    <nav id="top-navigation">
+        <a href="index.html" class="nav-link" type="text/html" coords="0,0,100,50">Головна</a> |
+        <a href="menu.html" class="nav-link" type="text/html" coords="200,0,300,50">Меню сайту</a> |
+    </nav>
+
+    <marquee id="promo-ticker" behavior="scroll" bgcolor="#1e293b" width="100%" scrollamount="5" truespeed="truespeed">
+        <span style="color: #ffffff; padding: 5px;">Акція від mel-auto! При купівлі автошампуню — серветка з мікрофібри у подарунок!</span>
+    </marquee>
+
+    <main class="site-main-content">
+        <h1>Ласкаво просимо до mel-auto!</h1>
+        <img src="mel.jpeg" alt="Логотип mel-auto" width="800" height="400">
+        <p>Ваш надійний постачальник преміальної автохімії та засобів догляду за автомобілем.</p>
+
+        <!-- Кнопка-посилання на сторінку каталогу -->
+        <div class="cta-container">
+            <a href="catalog.html" class="big-action-button">Перейти до повного каталогу продукції</a>
+        </div>
+
+        <h2 id="products">1. Основні категорії товарів (Нумерований список)</h2>
+        <ol id="cat-list" class="ordered-catalog" compact type="1" start="1" value="1">
+            <li id="item-1" class="catalog-item square-bullet" value="1" type="1">Очищувачі кузова та активна піна</li>
+            <li id="item-2" class="catalog-item square-bullet" value="2" type="1">Засоби для догляду за салоном (шкіра, пластик, тканина)</li>
+            <li id="item-3" class="catalog-item square-bullet" value="3" type="1">Поліролі та захисні керамічні покриття</li>
+        </ol>
+
+        <h2>2. Бестселери місяця (Маркований список)</h2>
+        <ul id="bestseller-list" class="unordered-catalog disc-bullet" type="disc" compact>
+            <li class="catalog-item" value="1"><strong>mel-auto Active Foam</strong> — Висококонцентрована рожева піна для безконтактного миття.</li>
+            <li class="catalog-item" value="2"><strong>mel-auto Leather Care</strong> — Кондиціонер для очищення та захисту шкіряних сидінь.</li>
+            <li class="catalog-item" value="3"><strong>mel-auto Hydro Gloss</strong> — Рідкий віск із гідрофобним ефектом та дзеркальним блиском.</li>
+        </ul>
+
+        <h2 id="terms">3. Словник автохімії (Список визначень)</h2>
+        <dl id="glossary-list" title="Глосарій автохімії" lang="uk">
+            <dt id="dt-1" title="Термін 1" style="font-weight: bold; color: #0284c7;">
+                <menuitem id="mi-1" class="menu-item-tag"></menuitem>Гідрофобність
+            </dt>
+            <dd id="dd-1" title="Визначення 1" style="margin-left: 20px; margin-bottom: 10px;">
+                <command dir="ltr" disabled class="cmd-element"></command>
+                Властивість захисного покриття відштовхувати воду та бруд, змушуючи краплі скочуватися з поверхні кузова.
+            </dd>
+
+            <dt id="dt-2" title="Термін 2" style="font-weight: bold; color: #0284c7;">
+                <menuitem id="mi-2" class="menu-item-tag"></menuitem>Активна піна
+            </dt>
+            <dd id="dd-2" title="Визначення 2" style="margin-left: 20px; margin-bottom: 10px;">
+                <command dir="ltr" disabled class="cmd-element"></command>
+                Спеціальний концентрований лужний розчин, який розщеплює стійкий дорожній бруд без використання губки.
+            </dd>
+        </dl>
+
+        <p><nobr class="no-break-notice">Увага! Вся продукція mel-auto сертифікована за стандартами ISO 9001.</nobr></p>
+    </main>
+</body>
+</html>
